@@ -5,7 +5,7 @@ import { tableData } from '../../../redux/tableRedux';
 
 const TablesList = () => {
 
-  
+  const tables = useSelector(state => tableData(state));
 
   return(
 
