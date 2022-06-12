@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .info{
+    display: flex;
+    flex-direction: row;
+
+    .title{
+      padding-right: 40px;
+
+      h3{
+        font-size: 30px;
+        margin: 0;
+      }
+    }
+
+    .status{
+      position: relative;
+
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-10%, -40%);
+
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+   
+  }
+
+  .buttonWrapper {
+
+  }
+}
