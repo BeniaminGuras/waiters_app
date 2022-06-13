@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import Title from "../Title/Title"
-import TablesList from "../TablesList/TablesList";
+import Title from "../../views/Title/Title"
+import TablesList from "../../views/TablesList/TablesList";
 
 
 const MainMenu = () => {

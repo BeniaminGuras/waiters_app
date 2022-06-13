@@ -1,8 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import {Route, Routes} from 'react-router-dom';
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import MainMenu from "./components/views/MainMenu/MainMenu";
+import MainMenu from "./components/pages/MainMenu/MainMenu";
 import NavBar from "./components/views/NavBar/NavBar";
 import { fetchTables } from './redux/tableRedux';
+import EditTablePage from './components/pages/EditTablePage/EditTablePage';
 
 function App() {
   const dispatch = useDispatch();
@@ -12,7 +15,10 @@ function App() {
   return (
     <main>
       <NavBar />
-      <MainMenu/>
+      <Routes>
+          <Route path='/' element={<MainMenu />} />
+          <Route path='/table/:id' element={<EditTablePage />}></Route>
+        </Routes>
     </main>
   );
 }
