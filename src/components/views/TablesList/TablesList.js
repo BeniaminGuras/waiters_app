@@ -13,6 +13,9 @@ import {
 const TablesList = () => {
 
   const a = useSelector(getTableData);
+  const sortedTables = a.sort((a, b) => {
+    return parseInt(a.id) - parseInt(b.id);
+  })
 
   if (a.length === 0)
     return (
@@ -33,7 +36,7 @@ const TablesList = () => {
   return(
 
     <ListGroup variant="flush">
-          {a.map(x =>
+          {sortedTables.map(x =>
              <ListGroup.Item key={shortid()}>
               <Table key={shortid()} id={x.id} status={x.status} />
              </ListGroup.Item>)}
